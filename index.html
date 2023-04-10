@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            background-color: brown;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inr_box{
+            background-color: skyblue;
+            padding-inline: 10px;
+            border-radius: 10px;
+        }
+        .srch{
+            border: none;
+            outline: none;
+            color: blue;
+            height: 40px;
+            width: 300px;
+            background-color: skyblue;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .srch::placeholder{
+            color: blue;
+        }
+
+        @media (min-width:540px) and (max-width:768px){
+            .inr_box{
+                border-radius: 20px;
+            }
+            .icn{
+                font-size: 20px;
+                padding: 10px;
+                cursor: pointer;
+            }
+            .srch{
+                display: none;
+                border: none;
+                outline: none;
+                background: skyblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inr_box">
+            <span><i class="fa-sharp fa-solid fa-magnifying-glass icn" ></i></span>
+            <input class="srch" type="search" placeholder="search">
+        </div>
+    </div>
+
+    <script>
+        const srch_btn = document.querySelector('.srch')
+        const icn_btn = document.querySelector('.icn')
+
+        icn_btn.addEventListener('click',function(){
+            srch_btn.classList.toggle('srch')
+            console.log('clicked')
+        })
+    </script>
+</body>
+</html>
