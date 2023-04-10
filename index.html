@@ -12,6 +12,7 @@
             height: 100vh;
             justify-content: center;
             align-items: center;
+            background-color: gray;
         }
         .box{
             background-color: brown;
@@ -25,16 +26,21 @@
             background-color: skyblue;
             padding-inline: 10px;
             border-radius: 10px;
+            position: relative;
+            height: 40px;
+            width: 20%;
+
         }
         .srch{
             border: none;
             outline: none;
+            position: absolute;
             color: blue;
             height: 40px;
             width: 300px;
-            background-color: skyblue;
+            background-color: cyan;
             font-size: 18px;
-            border-radius: 10px;
+            border-radius: 10px;        
         }
         .srch::placeholder{
             color: blue;
@@ -51,9 +57,11 @@
             }
             .srch{
                 display: none;
-                border: none;
-                outline: none;
-                background: skyblue;
+            }
+            .srch2{
+                display: block;
+                top: 60px;
+                left: 0;  
             }
         }
     </style>
@@ -71,7 +79,7 @@
         const icn_btn = document.querySelector('.icn')
 
         icn_btn.addEventListener('click',function(){
-            srch_btn.classList.toggle('srch')
+            srch_btn.classList.toggle('srch2')
             console.log('clicked')
         })
     </script>
