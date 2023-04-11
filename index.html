@@ -29,30 +29,43 @@
             position: relative;
             height: 40px;
             width: 20%;
-
+        }
+        .icn{
+            font-size: 25px;
+            padding-inline-start: 10px;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 20px;
         }
         .srch{
             border: none;
             outline: none;
             position: absolute;
-            color: blue;
+            right: 0;
+            top: 0;
+            color: brown;
             height: 40px;
-            width: 300px;
-            background-color: cyan;
+            width: 80%;
+            background-color: skyblue;
             font-size: 18px;
+            padding-inline: 10px;
             border-radius: 10px;        
         }
         .srch::placeholder{
-            color: blue;
+            color: brown;
         }
 
         @media (min-width:540px) and (max-width:768px){
             .inr_box{
                 border-radius: 20px;
+                width: 20px;
             }
             .icn{
                 font-size: 20px;
-                padding: 10px;
+                padding: 2px;
                 cursor: pointer;
             }
             .srch{
@@ -62,6 +75,7 @@
                 display: block;
                 top: 60px;
                 left: 0;  
+                width: 200px;
             }
         }
     </style>
